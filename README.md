@@ -20,6 +20,7 @@ This solution consists of two components running on a lightweight intermediate m
 ```mermaid
 graph TD
     User(["User (Browser / iLO App)"]) -->|HTTPS: 443| Nginx["Docker: Nginx Proxy<br/>OpenSSL 1.0.2"]
+    User -->|HTTPS: 8443| Nginx
     User -->|Raw TCP: 17988, 17990| Socat["Socat Proxy<br/>TCP_NODELAY"]
     
     subgraph "Raspberry Pi (Proxy Node)"
@@ -28,6 +29,7 @@ graph TD
     end
 
     Nginx -->|Legacy SSL/TLS| iLO["HP iLO 3 Server<br/>192.168.100.2"]
+    Nginx -->|Modern TLS 1.2| ESXi["ESXi Server<br/>192.168.100.3"]
     Socat -->|Raw TCP| iLO
 ```
 

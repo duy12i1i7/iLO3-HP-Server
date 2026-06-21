@@ -20,6 +20,7 @@ Giải pháp này yêu cầu một máy tính nhỏ gọn làm trung gian (như 
 ```mermaid
 graph TD
     User(["Máy Tính Của Bạn"]) -->|Web/HTTPS: 443| Nginx["Docker: Nginx Proxy<br/>OpenSSL 1.0.2"]
+    User -->|Web/HTTPS: 8443| Nginx
     User -->|Raw TCP: 17988, 17990| Socat["Socat Proxy<br/>Độ trễ = 0"]
     
     subgraph "Raspberry Pi (Máy Trung Gian)"
@@ -28,6 +29,7 @@ graph TD
     end
 
     Nginx -->|SSL đời cũ| iLO["HP iLO 3 Server<br/>192.168.100.2"]
+    Nginx -->|TLS 1.2 hiện đại| ESXi["ESXi Server<br/>192.168.100.3"]
     Socat -->|Raw TCP| iLO
 ```
 

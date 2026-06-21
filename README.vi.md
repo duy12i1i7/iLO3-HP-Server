@@ -47,7 +47,7 @@ graph TD
 ## Cách Sử Dụng
 
 - **Quản lý qua Web:** Mở Chrome/Edge và truy cập `http://<PROXY_IP>`
-- **Sử dụng Màn Hình Điều Khiển (KVM) / Cài Win:** Tải phần mềm [HPE iLO Integrated Remote Console (Standalone)](https://support.hpe.com/hpesc/public/swd/detail?swItemId=MTX_12810cd044de4e0da193f4cf24), mở lên và nhập `<PROXY_IP>` vào ô IP. (Bấm Accept nếu có cảnh báo chứng chỉ số).
+- **Sử dụng Màn Hình Điều Khiển (KVM) / Cài Win:** Tải phần mềm [HPE iLO Integrated Remote Console (Standalone)](https://downloads.hpe.com/pub/softlib2/software1/pubsw-windows/p390407056/v138774/Setup.exe) (hoặc sử dụng file `Setup.exe` dự phòng đã được đính kèm sẵn trong thư mục `tools/` của repo này phòng trường hợp link tải của HP bị hỏng), mở lên và nhập `<PROXY_IP>` vào ô IP. (Bấm Accept nếu có cảnh báo chứng chỉ số).
 
 > [!TIP]
 > Nếu bạn vào ESXi mà bàn phím lại bị liệt (trong khi màn hình vẫn chạy), hãy kiểm tra lại bản quyền iLO. HP iLO 3 bản "Standard" chỉ cho gõ phím ở màn hình đen BIOS. Bạn cần nạp key bản quyền "iLO Advanced" thì mới gõ phím được bên trong hệ điều hành nhé!

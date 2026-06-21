@@ -47,7 +47,7 @@ graph TD
 ## Usage
 
 - **Web Management:** Open your modern browser and go to `http://<PROXY_IP>`
-- **Virtual Console / KVM:** Download the [HPE iLO Integrated Remote Console (Standalone)](https://support.hpe.com/hpesc/public/swd/detail?swItemId=MTX_12810cd044de4e0da193f4cf24), open it, and type `<PROXY_IP>` in the address bar. (Accept the self-signed certificate warning if prompted).
+- **Virtual Console / KVM:** Download the [HPE iLO Integrated Remote Console (Standalone)](https://downloads.hpe.com/pub/softlib2/software1/pubsw-windows/p390407056/v138774/Setup.exe) (or use the backup `Setup.exe` provided in the `tools/` folder of this repository in case the official link goes down), open it, and type `<PROXY_IP>` in the address bar. (Accept the self-signed certificate warning if prompted).
 
 > [!TIP]
 > If you boot into ESXi or an OS and your keyboard stops working while the screen still updates, verify your iLO licensing. iLO 3 Standard limits KVM keyboard input to POST/BIOS only. You need an "iLO Advanced" license for full OS control.

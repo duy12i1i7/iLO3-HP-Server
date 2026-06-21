@@ -47,6 +47,7 @@ graph TD
 ## Usage
 
 - **Web Management:** Open your modern browser and go to `http://<PROXY_IP>`
+- **ESXi Web UI (Bonus):** Access the ESXi management console securely by navigating to `https://<PROXY_IP>:8443`
 - **Virtual Console / KVM:** Download the [HPE iLO Integrated Remote Console (Standalone)](https://downloads.hpe.com/pub/softlib2/software1/pubsw-windows/p390407056/v138774/Setup.exe) (or use the backup `Setup.exe` provided in the `tools/` folder of this repository in case the official link goes down), open it, and type `<PROXY_IP>` in the address bar. (Accept the self-signed certificate warning if prompted).
 
 > [!TIP]

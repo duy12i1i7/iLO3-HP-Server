@@ -47,6 +47,7 @@ graph TD
 ## Cách Sử Dụng
 
 - **Quản lý qua Web:** Mở Chrome/Edge và truy cập `http://<PROXY_IP>`
+- **Quản lý ESXi (Cổng phụ):** Truy cập giao diện quản lý máy ảo ESXi an toàn qua cổng `https://<PROXY_IP>:8443`
 - **Sử dụng Màn Hình Điều Khiển (KVM) / Cài Win:** Tải phần mềm [HPE iLO Integrated Remote Console (Standalone)](https://downloads.hpe.com/pub/softlib2/software1/pubsw-windows/p390407056/v138774/Setup.exe) (hoặc sử dụng file `Setup.exe` dự phòng đã được đính kèm sẵn trong thư mục `tools/` của repo này phòng trường hợp link tải của HP bị hỏng), mở lên và nhập `<PROXY_IP>` vào ô IP. (Bấm Accept nếu có cảnh báo chứng chỉ số).
 
 > [!TIP]

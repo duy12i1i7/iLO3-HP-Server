@@ -1,0 +1,12 @@
+[Unit]
+Description=iLO 3 Raw TCP Proxy using Socat
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/socat TCP-LISTEN:%i,fork,nodelay TCP:192.168.100.2:%i,nodelay
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target

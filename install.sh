@@ -70,10 +70,11 @@ docker run -d --restart always \
     --name "$CONTAINER_NAME" \
     -p 80:80 \
     -p 443:443 \
+    -p 8443:8443 \
     -v "$CONF_DIR/nginx-ilo.conf:/etc/nginx/nginx.conf:ro" \
     -v "$SSL_DIR:/etc/nginx/ssl:ro" \
     "$DOCKER_IMAGE_NAME"
-echo "  -> Nginx container đã khởi chạy (Cổng 80 và 443)."
+echo "  -> Nginx container đã khởi chạy (Cổng 80, 443, 8443)."
 
 # 7. CÀI ĐẶT SOCAT VÀ SYSTEMD SERVICES
 echo "[5/6] Đang cài đặt Socat (Pure TCP Proxy) cho Video/Bàn phím..."

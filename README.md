@@ -19,15 +19,15 @@ This solution consists of two components running on a lightweight intermediate m
 
 ```mermaid
 graph TD
-    User([User (Browser / iLO App)]) -->|HTTPS: 443| Nginx[Docker: Nginx Proxy<br/>OpenSSL 1.0.2]
-    User -->|Raw TCP: 17988, 17990| Socat[Socat Proxy<br/>TCP_NODELAY]
+    User(["User (Browser / iLO App)"]) -->|HTTPS: 443| Nginx["Docker: Nginx Proxy<br/>OpenSSL 1.0.2"]
+    User -->|Raw TCP: 17988, 17990| Socat["Socat Proxy<br/>TCP_NODELAY"]
     
-    subgraph Raspberry Pi (Proxy Node)
+    subgraph "Raspberry Pi (Proxy Node)"
         Nginx
         Socat
     end
 
-    Nginx -->|Legacy SSL/TLS| iLO[HP iLO 3 Server<br/>192.168.100.2]
+    Nginx -->|Legacy SSL/TLS| iLO["HP iLO 3 Server<br/>192.168.100.2"]
     Socat -->|Raw TCP| iLO
 ```
 

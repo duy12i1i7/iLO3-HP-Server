@@ -19,15 +19,15 @@ Giải pháp này yêu cầu một máy tính nhỏ gọn làm trung gian (như 
 
 ```mermaid
 graph TD
-    User([Máy Tính Của Bạn]) -->|Web/HTTPS: 443| Nginx[Docker: Nginx Proxy<br/>OpenSSL 1.0.2]
-    User -->|Raw TCP: 17988, 17990| Socat[Socat Proxy<br/>Độ trễ = 0]
+    User(["Máy Tính Của Bạn"]) -->|Web/HTTPS: 443| Nginx["Docker: Nginx Proxy<br/>OpenSSL 1.0.2"]
+    User -->|Raw TCP: 17988, 17990| Socat["Socat Proxy<br/>Độ trễ = 0"]
     
-    subgraph Raspberry Pi (Máy Trung Gian)
+    subgraph "Raspberry Pi (Máy Trung Gian)"
         Nginx
         Socat
     end
 
-    Nginx -->|SSL đời cũ| iLO[HP iLO 3 Server<br/>192.168.100.2]
+    Nginx -->|SSL đời cũ| iLO["HP iLO 3 Server<br/>192.168.100.2"]
     Socat -->|Raw TCP| iLO
 ```
 
